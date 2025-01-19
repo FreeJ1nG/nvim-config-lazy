@@ -2,10 +2,10 @@ return {
 	"stevearc/conform.nvim",
 	opts = {
 		formatters_by_ft = {
-			javascript = { "eslint_d", "prettierd", stop_after_first = true },
-			typescript = { "eslint_d", "prettierd", stop_after_first = true },
-			javascriptreact = { "eslint_d", "prettierd", stop_after_first = true },
-			typescriptreact = { "eslint_d", "prettierd", stop_after_first = true },
+			javascript = { "prettierd", "eslint_d" },
+			typescript = { "prettierd", "eslint_d" },
+			javascriptreact = { "prettierd", "eslint_d" },
+			typescriptreact = { "prettierd", "eslint_d" },
 			lua = { "stylua" },
 			-- Conform will run multiple formatters sequentially
 			go = { "goimports", "gofmt" },
