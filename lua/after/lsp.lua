@@ -38,8 +38,15 @@ end)
 require("mason").setup({})
 local mason_lspconfig = require("mason-lspconfig")
 mason_lspconfig.setup({
-	ensure_installed = { "ts_ls", "rust_analyzer", "tailwindcss", "cssls", "terraformls" },
+	ensure_installed = { "mdx_analyzer", "ts_ls", "rust_analyzer", "tailwindcss", "cssls", "terraformls" },
 	handlers = {
 		lsp_zero.default_setup,
 	},
 })
+
+local lspconfig = require("lspconfig")
+vim.lsp.config("mdx_analyzer", {
+	filetypes = { "mdx" },
+})
+vim.lsp.enable({ "ts_ls" })
+vim.lsp.config("clangd", {})
